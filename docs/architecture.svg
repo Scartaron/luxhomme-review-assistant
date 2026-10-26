@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect width="1440" height="900" fill="#f8fafc"/>
+<text x="720" y="52" font-family="Arial,sans-serif" font-size="30" font-weight="700" text-anchor="middle" fill="#0f172a">Luxhomme Review Assistant — architecture</text>
+<style>
+.box{fill:#fff;stroke:#64748b;stroke-width:2;rx:16}
+.t{font:700 20px Arial,sans-serif;fill:#0f172a;text-anchor:middle}
+.s{font:16px Arial,sans-serif;fill:#475569;text-anchor:middle}
+.a{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#arrow)}
+.d{stroke:#64748b;stroke-width:2.5;stroke-dasharray:7 6;fill:none;marker-end:url(#arrow)}
+</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+
+<rect class="box" x="90" y="100" width="340" height="88"/>
+<text class="t" x="260" y="134">CSV: текущий период</text>
+<text class="s" x="260" y="162">date · sku · rating · text</text>
+
+<rect class="box" x="1010" y="100" width="340" height="88"/>
+<text class="t" x="1180" y="134">CSV: предыдущий период</text>
+<text class="s" x="1180" y="162">для сравнения динамики</text>
+
+<path class="a" d="M260 188 V220 H520 V250"/>
+<path class="a" d="M1180 188 V220 H920 V250"/>
+
+<rect class="box" x="390" y="250" width="660" height="112"/>
+<text class="t" x="720" y="287">Проверка данных и AI-разметка</text>
+<text class="s" x="720" y="317">Тема · тональность · краткое объяснение</text>
+<text class="s" x="720" y="341">Проверка структуры и допустимых значений JSON</text>
+
+<path class="a" d="M720 362 V425"/>
+<rect class="box" x="390" y="425" width="660" height="94"/>
+<text class="t" x="720" y="462">Агрегация и сравнение периодов</text>
+<text class="s" x="720" y="490">Топ тем · жалобы с цитатами · динамика</text>
+
+<path class="a" d="M500 519 V565 H300 V610"/>
+<path class="a" d="M940 519 V565 H1140 V610"/>
+
+<rect class="box" x="120" y="610" width="360" height="82"/>
+<text class="t" x="300" y="644">Предпросмотр отчёта</text>
+<text class="s" x="300" y="672">ручная проверка перед отправкой</text>
+
+<rect class="box" x="960" y="610" width="360" height="82"/>
+<text class="t" x="1140" y="644">Telegram Bot API</text>
+<text class="s" x="1140" y="672">опциональная отправка</text>
+
+<rect class="box" x="510" y="610" width="420" height="82"/>
+<text class="t" x="720" y="644">SQLite</text>
+<text class="s" x="720" y="672">текущие результаты и метаданные</text>
+<path class="d" d="M720 519 V600"/>
+
+<text class="s" x="720" y="755">Ручная проверка выборки — отдельный процесс контроля ка чества</text>
+<text class="s" x="720" y="790">Сплошные стрелки — основной поток · пунктир — сохранение результатов и метаданных</text>
+</svg>

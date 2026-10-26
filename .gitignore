@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+review_history.sqlite3
+*.db
+.DS_Store
